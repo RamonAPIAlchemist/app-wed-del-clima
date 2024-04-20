@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #71f6ff 0%, #dbdbdb 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%; /* Ajuste para hacerlo más estrecho en pantallas más pequeñas */
+    max-width: 800px; /* Límite máximo de ancho */
+    margin: 50px auto;
+    background-image: linear-gradient(to bottom, #0ae2f1, #09c2e8, #07a1d9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 14px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    background-color: #008fa1;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.weather-info {
+    background-color: #cafbff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s, background-color 0.5s;
+}
+
+.map-container {
+    margin-top: 20px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px; /* Tamaño del mapa ajustado */
+    border: none;
+    border-radius: 20px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.share-buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #008fa1;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.share-buttons a:hover {
+    background-color: #070707;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Estilos específicos para pantallas de hasta 600px de ancho */
+    .container {
+        width: 95%;
+    }
+
+    .map-container iframe {
+        height: 300px; /* Reducir el tamaño del mapa en pantallas pequeñas */
+    }
+}
